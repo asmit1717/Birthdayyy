@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aroma ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ffb6c1,#ff69b4);
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    animation: glow 2s infinite alternate;
+}
+
+.hero p{
+    font-size:1.4rem;
+    margin-top:20px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff1493;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.card{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    line-height:1.8;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.gallery img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 15px rgba(255,255,255,0.4);
+}
+
+.reason{
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    margin:10px;
+    border-radius:15px;
+    display:inline-block;
+    width:250px;
+}
+
+#surprise{
+    display:none;
+    font-size:3rem;
+    margin-top:30px;
+    animation:bounce 1s infinite;
+}
+
+footer{
+    text-align:center;
+    padding:50px;
+    font-size:1.2rem;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px white; }
+    to{ text-shadow:0 0 30px white; }
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+.heart{
+    position:fixed;
+    color:white;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(100vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>🎂 Happy Birthday Aroma ❤️</h1>
+    <p>From Momo, with all my love 💕</p>
+    <button class="btn" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">
+        Open Your Surprise ❤️
+    </button>
+</div>
+
+<div class="section" id="message">
+    <h2>💌 A Special Message</h2>
+    <br>
+    <div class="card">
+        Just sitting here thinking about how amazing you are.
+        Seriously, you're the most beautiful girl in the world,
+        and I love every single thing about you.
+        <br><br>
+
+        You always know how to lift my mood and make me smile
+        just by being around. I feel so safe and happy with you.
+        You're the absolute best, and you're perfect to me.
+        <br><br>
+
+        And happyyyieest birthday babe 🎂❤️
+
+        You make me happiest. It feels soo good when you are around.
+        Thank you for being you.
+        <br><br>
+
+        I love you forever ❤️
+        <br><br>
+
+        — Momo 💕
+    </div>
+</div>
+
+<div class="section">
+    <h2>📸 Our Memories</h2>
+    <br>
+    <div class="gallery">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+        <img src="photo4.jpg">
+    </div>
+</div>
+
+<div class="section">
+    <h2>❤️ Reasons I Love You</h2>
+    <br>
+
+    <div class="reason">😊 Your beautiful smile</div>
+    <div class="reason">💕 Your kindness</div>
+    <div class="reason">🌸 Your cute personality</div>
+    <div class="reason">✨ The way you make me happy</div>
+    <div class="reason">💖 Your caring heart</div>
+    <div class="reason">🥰 Because you're Aroma</div>
+</div>
+
+<div class="section">
+    <h2>🎁 Final Surprise</h2>
+    <br>
+
+    <button class="btn" onclick="showLove()">
+        Click Me ❤️
+    </button>
+
+    <div id="surprise">
+        I LOVE YOU AROMA ❤️❤️❤️
+    </div>
+</div>
+
+<footer>
+    Happy Birthday My Princess 👑💕<br>
+    Forever Yours,<br>
+    Momo ❤️
+</footer>
+
+<script>
+function showLove(){
+    document.getElementById("surprise").style.display="block";
+
+    for(let i=0;i<100;i++){
+        let heart=document.createElement("div");
+        heart.innerHTML="❤️";
+        heart.classList.add("heart");
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.fontSize=(Math.random()*25+15)+"px";
+        heart.style.animationDuration=(Math.random()*4+3)+"s";
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },7000);
+    }
+}
+</script>
+
+</body>
+</html>
